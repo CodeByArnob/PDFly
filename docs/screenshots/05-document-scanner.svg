@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 1140" width="540" height="1140">
+  <rect width="540" height="1140" rx="44" fill="#0B1120"/>
+  <text x="32" y="68" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#F8FAFC">✕   CameraX Document Scanner</text>
+  <rect x="404" y="44" width="108" height="34" rx="17" fill="#1E293B" stroke="#475569"/>
+  <text x="458" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">A4 Portrait</text>
+
+  <rect x="28" y="96" width="484" height="640" rx="24" fill="#131C31" stroke="#334155" stroke-width="1.5"/>
+
+  <polygon points="78,148 462,136 476,682 64,690" fill="#FFFFFF" stroke="#10B981" stroke-width="3"/>
+  <circle cx="78" cy="148" r="8" fill="#10B981"/>
+  <circle cx="462" cy="136" r="8" fill="#10B981"/>
+  <circle cx="476" cy="682" r="8" fill="#10B981"/>
+  <circle cx="64" cy="690" r="8" fill="#10B981"/>
+
+  <text x="104" y="196" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#0F172A">INVOICE &amp; DELIVERY RECEIPT #2026-089</text>
+  <line x1="104" y1="212" x2="436" y2="212" stroke="#0F172A" stroke-width="2"/>
+  <rect x="104" y="236" width="240" height="10" rx="4" fill="#1E293B"/>
+  <rect x="104" y="258" width="310" height="10" rx="4" fill="#334155"/>
+  <rect x="104" y="280" width="280" height="10" rx="4" fill="#334155"/>
+  <rect x="104" y="324" width="330" height="120" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="124" y="356" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">B&amp;W High-Contrast Filter Active</text>
+  <text x="124" y="382" font-family="system-ui, sans-serif" font-size="11.5" fill="#334155">Auto-edge crop + shadow removal</text>
+  <text x="124" y="406" font-family="system-ui, sans-serif" font-size="11.5" fill="#334155">Multi-page batch capture ready</text>
+
+  <rect x="150" y="698" width="240" height="28" rx="14" fill="#064E3B" stroke="#10B981"/>
+  <text x="270" y="717" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#6EE7B7">✓ Document Edges Locked • Crisp B&amp;W</text>
+
+  <text x="32" y="772" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#CBD5E1">Enhancement Filter &amp; Page Adjustments</text>
+  <rect x="28" y="788" width="114" height="38" rx="12" fill="#FB7185"/>
+  <text x="85" y="812" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#4C0519">B&amp;W Document</text>
+
+  <rect x="152" y="788" width="114" height="38" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="209" y="812" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Magic Color</text>
+
+  <rect x="276" y="788" width="114" height="38" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="333" y="812" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Grayscale</text>
+
+  <rect x="400" y="788" width="112" height="38" rx="12" fill="#1E293B" stroke="#334155"/>
+  <text x="456" y="812" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#F8FAFC">Rotate 90°</text>
+
+  <rect x="28" y="852" width="484" height="88" rx="18" fill="#131C31" stroke="#334155"/>
+  <text x="48" y="886" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#F8FAFC">3 Pages in Current Scan Batch</text>
+  <text x="48" y="910" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8">A4 Portrait • Standard 36pt Margin • 85% Quality</text>
+  <rect x="364" y="872" width="130" height="46" rx="14" fill="#10B981"/>
+  <text x="429" y="900" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#064E3B">Export PDF →</text>
+
+  <circle cx="270" cy="1024" r="42" fill="none" stroke="#F8FAFC" stroke-width="4"/>
+  <circle cx="270" cy="1024" r="32" fill="#FB7185"/>
+</svg>

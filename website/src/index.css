@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-canvas: #F1F5F9;
+    --bg-surface: #FFFFFF;
+    --border-subtle: #CBD5E1;
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
+    --brand-crimson: #BE123C;
+  }
+
+  .dark {
+    --bg-canvas: #0B1120;
+    --bg-surface: #131C31;
+    --border-subtle: #334155;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
+    --brand-crimson: #FB7185;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Reduced motion accessibility respect */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

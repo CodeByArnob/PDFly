@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 1140" width="540" height="1140">
+  <rect width="540" height="1140" rx="44" fill="#F1F5F9"/>
+  <rect x="0" y="0" width="540" height="104" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="32" y="72" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#0F172A">←  Merge &amp; Compress Workspace</text>
+
+  <rect x="24" y="128" width="492" height="390" rx="22" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="44" y="164" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#0F172A">Merge Queue (3 Documents • 10 Pages)</text>
+  <text x="44" y="186" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">Reorder files before combining into a single ISO PDF 1.4 document</text>
+
+  <rect x="44" y="206" width="452" height="68" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <rect x="58" y="220" width="40" height="40" rx="10" fill="#FFE4E6"/>
+  <text x="78" y="245" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#BE123C">01</text>
+  <text x="112" y="236" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111827">Product_Architecture_Handbook.pdf</text>
+  <text x="112" y="256" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">4 pages • 284 KB • Portrait A4</text>
+
+  <rect x="44" y="286" width="452" height="68" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <rect x="58" y="300" width="40" height="40" rx="10" fill="#E0E7FF"/>
+  <text x="78" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#3730A3">02</text>
+  <text x="112" y="316" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111827">Q4_Financial_Audit_Statement.pdf</text>
+  <text x="112" y="336" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">3 pages • 196 KB • Portrait A4</text>
+
+  <rect x="44" y="366" width="452" height="68" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <rect x="58" y="380" width="40" height="40" rx="10" fill="#D1FAE5"/>
+  <text x="78" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#047857">03</text>
+  <text x="112" y="396" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111827">Vendor_Service_Agreement_Signed.pdf</text>
+  <text x="112" y="416" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">3 pages • 212 KB • US Letter</text>
+
+  <rect x="44" y="452" width="452" height="46" rx="14" fill="#BE123C"/>
+  <text x="270" y="480" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Merge 3 PDFs into Single Document (10 Pages)</text>
+
+  <rect x="24" y="542" width="492" height="460" rx="22" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="44" y="578" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#0F172A">Smart PDF Compression Engine</text>
+  <text x="44" y="600" font-family="system-ui, sans-serif" font-size="12" fill="#475569">Downsamples embedded raster streams while preserving crisp readability</text>
+
+  <rect x="44" y="620" width="452" height="66" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="64" y="648" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111827">Low Compression (150 DPI • 84% Quality)</text>
+  <text x="64" y="668" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Preserves crisp typography • ~15–30% smaller</text>
+
+  <rect x="44" y="698" width="452" height="66" rx="14" fill="#FFE4E6" stroke="#BE123C" stroke-width="1.8"/>
+  <text x="64" y="726" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#BE123C">✓ Medium Compression (115 DPI • 68% Quality)</text>
+  <text x="64" y="746" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#4C0519">Balanced email sharing preset • ~35–55% smaller</text>
+
+  <rect x="44" y="776" width="452" height="66" rx="14" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="64" y="804" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#111827">High Compression (85 DPI • 50% Quality)</text>
+  <text x="64" y="824" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Maximum size reduction for strict upload limits</text>
+
+  <rect x="44" y="862" width="452" height="116" rx="16" fill="#D1FAE5" stroke="#34D399"/>
+  <text x="64" y="892" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#065F46">LOCAL COMPRESSION VERIFIED</text>
+  <text x="64" y="924" font-family="system-ui, sans-serif" font-size="22" font-weight="900" fill="#064E3B">692 KB  →  318 KB  (-54%)</text>
+  <text x="64" y="952" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#047857">Saved to device storage via Android SAF • Export &amp; Share Ready</text>
+</svg>

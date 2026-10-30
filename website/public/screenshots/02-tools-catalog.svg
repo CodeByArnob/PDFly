@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 1140" width="540" height="1140">
+  <rect width="540" height="1140" rx="44" fill="#F1F5F9"/>
+  <text x="36" y="34" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0F172A">9:41</text>
+  <rect x="210" y="14" width="120" height="24" rx="12" fill="#0F172A"/>
+  <text x="456" y="34" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0F172A">100%</text>
+
+  <text x="24" y="78" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#0F172A">Complete PDF Toolkit</text>
+  <text x="24" y="100" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#475569">All 16 tools execute 100% locally on your Android device</text>
+
+  <rect x="24" y="116" width="492" height="48" rx="14" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.2"/>
+  <text x="46" y="145" font-family="system-ui, sans-serif" font-size="13.5" font-weight="500" fill="#64748B">Search 16 tools (Merge, Split, Extract Text, Watermark...)</text>
+
+  <rect x="24" y="178" width="84" height="32" rx="16" fill="#BE123C"/>
+  <text x="66" y="199" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">All (16)</text>
+  <rect x="116" y="178" width="102" height="32" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="167" y="199" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155">Read &amp; Edit</text>
+  <rect x="226" y="178" width="106" height="32" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="279" y="199" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155">Organize PDF</text>
+  <rect x="340" y="178" width="118" height="32" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="399" y="199" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155">Convert &amp; Scan</text>
+
+  <text x="24" y="240" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#0F172A">ORGANIZE &amp; OPTIMIZE PDF</text>
+  <rect x="24" y="252" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="284" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Merge PDF</text>
+  <text x="42" y="304" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Combine multiple PDFs in</text>
+  <text x="42" y="320" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">custom drag-and-drop order</text>
+
+  <rect x="278" y="252" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="296" y="284" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Split PDF</text>
+  <text x="296" y="304" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Extract ranges, single page,</text>
+  <text x="296" y="320" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">or burst all pages to PDFs</text>
+
+  <rect x="24" y="356" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="388" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Page Organizer</text>
+  <text x="42" y="408" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Reorder, rotate 90°/180°/270°,</text>
+  <text x="42" y="424" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">delete, or extract pages</text>
+
+  <rect x="278" y="356" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="296" y="388" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Compress PDF</text>
+  <text x="296" y="408" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Shrink file size with Low,</text>
+  <text x="296" y="424" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Medium, or High DPI presets</text>
+
+  <text x="24" y="480" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#0F172A">CONVERT &amp; EXTRACT</text>
+  <rect x="24" y="492" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="524" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">JPG / PNG to PDF</text>
+  <text x="42" y="544" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Format images into A4, US</text>
+  <text x="42" y="560" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Letter, or Legal documents</text>
+
+  <rect x="278" y="492" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="296" y="524" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">PDF to JPG / PNG</text>
+  <text x="296" y="544" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Render pages into crisp</text>
+  <text x="296" y="560" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">high-res PNG or JPG files</text>
+
+  <rect x="24" y="596" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="628" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Extract PDF Text</text>
+  <text x="42" y="648" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Parse text streams into</text>
+  <text x="42" y="664" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">searchable TXT or summary</text>
+
+  <rect x="278" y="596" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="296" y="628" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Extract Images</text>
+  <text x="296" y="648" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Export embedded page graphics</text>
+  <text x="296" y="664" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">as standalone image files</text>
+
+  <text x="24" y="720" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#0F172A">SCAN, STAMP &amp; SECURITY</text>
+  <rect x="24" y="732" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="764" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">PDF Watermark</text>
+  <text x="42" y="784" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Diagonal, header, or footer</text>
+  <text x="42" y="800" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">stamps with custom opacity</text>
+
+  <rect x="278" y="732" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="296" y="764" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Add Page Numbers</text>
+  <text x="296" y="784" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Stamp Page X of Y numbering</text>
+  <text x="296" y="800" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">across all document pages</text>
+
+  <rect x="24" y="836" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="868" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Security &amp; Unlock</text>
+  <text x="42" y="888" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Protect or unlock authorized</text>
+  <text x="42" y="904" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">PDF files with SHA-256</text>
+
+  <rect x="278" y="836" width="238" height="92" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="296" y="868" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Metadata Inspector</text>
+  <text x="296" y="888" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">Inspect PDF version, page</text>
+  <text x="296" y="904" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">boxes, and SHA-256 checksum</text>
+
+  <rect x="0" y="1036" width="540" height="104" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="68" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">HOME</text>
+  <text x="68" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Home</text>
+  <rect x="135" y="1050" width="68" height="32" rx="16" fill="#FFE4E6"/>
+  <text x="169" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#BE123C">TOOLS</text>
+  <text x="169" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800" fill="#BE123C">Tools</text>
+  <text x="270" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">SCAN</text>
+  <text x="270" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Scan</text>
+  <text x="371" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">FILES</text>
+  <text x="371" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Recent</text>
+  <text x="472" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">PREFS</text>
+  <text x="472" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Settings</text>
+</svg>

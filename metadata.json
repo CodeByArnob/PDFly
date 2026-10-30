@@ -1,0 +1,10 @@
+{
+  "name": "PDFly",
+  "description": "Complete offline-first PDF editor, document scanner, merger, splitter, compressor, and annotation toolkit.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,35 +1,46 @@
-# Gradle files
+# ============================================================================
+# PDFly — Root .gitignore (Android + Official Website + Secret Protection)
+# ============================================================================
+
+# Gradle & Android Build Outputs
 .gradle/
 build/
+app/build/
 .kotlin/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
+.build-outputs/
 captures/
 .externalNativeBuild/
 .cxx/
-*.aab
 *.apk
+*.aab
+*.ap_
+*.dex
 output-metadata.json
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
+# Local Environment & Secrets (NEVER COMMIT)
+local.properties
+.env
+.env.local
+.env.*.local
 google-services.json
 
-# Android Profiling
+# Keystores & Signing Credentials (NEVER COMMIT)
+*.jks
+*.keystore
+debug.keystore
+debug.keystore.base64
+
+# Website Dependencies & Static Build Artifacts
+website/node_modules/
+website/dist/
+website/.vite/
+*.tsbuildinfo
+.npm/
+
+# Android Studio / IntelliJ IDEA / OS
+*.iml
+.idea/
+.DS_Store
+Thumbs.db
+*.log
 *.hprof

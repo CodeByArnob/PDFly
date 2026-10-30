@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 1140" width="540" height="1140">
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BE123C"/>
+      <stop offset="55%" stop-color="#9F1239"/>
+      <stop offset="100%" stop-color="#3730A3"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+  <rect width="540" height="1140" rx="44" fill="#F1F5F9"/>
+  <text x="36" y="34" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0F172A">9:41</text>
+  <rect x="210" y="14" width="120" height="24" rx="12" fill="#0F172A"/>
+  <text x="456" y="34" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0F172A">100%</text>
+
+  <rect x="24" y="54" width="44" height="44" rx="13" fill="#BE123C"/>
+  <text x="46" y="83" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="900" fill="#FFFFFF">PDF</text>
+  <text x="80" y="74" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#0F172A">PDFly</text>
+  <text x="80" y="93" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Your Complete PDF Studio • 100% Offline</text>
+  <rect x="412" y="60" width="104" height="32" rx="16" fill="#FFE4E6" stroke="#FDA4AF" stroke-width="1"/>
+  <text x="464" y="81" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#BE123C">♥ Support</text>
+
+  <rect x="24" y="116" width="492" height="176" rx="24" fill="url(#heroGrad)" filter="url(#cardShadow)"/>
+  <rect x="44" y="136" width="158" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.18"/>
+  <text x="123" y="154" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">100% LOCAL &amp; PRIVATE</text>
+  <text x="44" y="192" font-family="system-ui, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">Read, Edit, Scan &amp;</text>
+  <text x="44" y="220" font-family="system-ui, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">Convert PDFs Offline</text>
+  <text x="44" y="246" font-family="system-ui, sans-serif" font-size="12.5" font-weight="500" fill="#FFE4E6">16 native tools • Zero cloud uploads • Zero paywalls</text>
+  <rect x="44" y="256" width="134" height="26" rx="8" fill="#FFFFFF"/>
+  <text x="111" y="273" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#BE123C">+ Open PDF File</text>
+  <rect x="188" y="256" width="124" height="26" rx="8" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="250" y="273" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Scan Document</text>
+
+  <rect x="24" y="308" width="154" height="72" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="40" y="336" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#BE123C">16</text>
+  <text x="40" y="356" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155">On-Device Tools</text>
+  <text x="40" y="370" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#64748B">All unlocked free</text>
+
+  <rect x="193" y="308" width="154" height="72" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="209" y="336" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#047857">0 KB</text>
+  <text x="209" y="356" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155">Cloud Uploads</text>
+  <text x="209" y="370" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#64748B">No INTERNET perm</text>
+
+  <rect x="362" y="308" width="154" height="72" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="378" y="336" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#3730A3">PDF 1.4</text>
+  <text x="378" y="356" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#334155">Native Engine</text>
+  <text x="378" y="370" font-family="system-ui, sans-serif" font-size="10" font-weight="500" fill="#64748B">SAF &amp; CameraX</text>
+
+  <text x="24" y="414" font-family="system-ui, sans-serif" font-size="17" font-weight="800" fill="#0F172A">Essential PDF Tools</text>
+  <text x="438" y="414" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#BE123C">See all 16 →</text>
+
+  <rect x="24" y="428" width="238" height="104" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="40" y="444" width="42" height="42" rx="12" fill="#FFE4E6"/>
+  <text x="61" y="471" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#BE123C">READ</text>
+  <rect x="190" y="444" width="56" height="22" rx="11" fill="#FFE4E6"/>
+  <text x="218" y="459" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#BE123C">Reader</text>
+  <text x="40" y="504" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">PDF Reader</text>
+  <text x="40" y="522" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#475569">Zoom, search text &amp; bookmarks</text>
+
+  <rect x="278" y="428" width="238" height="104" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="294" y="444" width="42" height="42" rx="12" fill="#E0E7FF"/>
+  <text x="315" y="471" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#3730A3">MRG</text>
+  <rect x="438" y="444" width="62" height="22" rx="11" fill="#E0E7FF"/>
+  <text x="469" y="459" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#3730A3">Combine</text>
+  <text x="294" y="504" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Merge PDF</text>
+  <text x="294" y="522" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#475569">Combine multiple PDFs in order</text>
+
+  <rect x="24" y="544" width="238" height="104" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="40" y="560" width="42" height="42" rx="12" fill="#E0F2FE"/>
+  <text x="61" y="587" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#0369A1">SPLT</text>
+  <rect x="190" y="560" width="56" height="22" rx="11" fill="#E0F2FE"/>
+  <text x="218" y="575" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#0369A1">Extract</text>
+  <text x="40" y="620" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Split PDF</text>
+  <text x="40" y="638" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#475569">Extract custom ranges or pages</text>
+
+  <rect x="278" y="544" width="238" height="104" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="294" y="560" width="42" height="42" rx="12" fill="#D1FAE5"/>
+  <text x="315" y="587" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#047857">OPT</text>
+  <rect x="438" y="560" width="62" height="22" rx="11" fill="#D1FAE5"/>
+  <text x="469" y="575" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#047857">Optimize</text>
+  <text x="294" y="620" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Compress PDF</text>
+  <text x="294" y="638" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#475569">Reduce file size with 3 presets</text>
+
+  <rect x="24" y="660" width="238" height="104" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="40" y="676" width="42" height="42" rx="12" fill="#EDE9FE"/>
+  <text x="61" y="703" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#5B21B6">SCAN</text>
+  <rect x="184" y="676" width="62" height="22" rx="11" fill="#EDE9FE"/>
+  <text x="215" y="691" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#5B21B6">CameraX</text>
+  <text x="40" y="736" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Document Scanner</text>
+  <text x="40" y="754" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#475569">Auto-crop &amp; B&amp;W enhance</text>
+
+  <rect x="278" y="660" width="238" height="104" rx="18" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+  <rect x="294" y="676" width="42" height="42" rx="12" fill="#FEF3C7"/>
+  <text x="315" y="703" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#B45309">SIGN</text>
+  <rect x="444" y="676" width="56" height="22" rx="11" fill="#FEF3C7"/>
+  <text x="472" y="691" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#B45309">Markup</text>
+  <text x="294" y="736" font-family="system-ui, sans-serif" font-size="15" font-weight="800" fill="#111827">Annotate &amp; Sign</text>
+  <text x="294" y="754" font-family="system-ui, sans-serif" font-size="11.5" font-weight="500" fill="#475569">Ink, highlights &amp; signatures</text>
+
+  <text x="24" y="800" font-family="system-ui, sans-serif" font-size="17" font-weight="800" fill="#0F172A">Recent Workspace Documents</text>
+
+  <rect x="24" y="814" width="492" height="74" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="828" width="46" height="46" rx="12" fill="#FFE4E6"/>
+  <text x="63" y="856" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#BE123C">PDF</text>
+  <text x="100" y="846" font-family="system-ui, sans-serif" font-size="14.5" font-weight="700" fill="#111827">Product_Architecture_Handbook_v2.pdf</text>
+  <text x="100" y="868" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">4 pages • 284 KB • Annotated locally</text>
+  <rect x="436" y="836" width="64" height="30" rx="10" fill="#F1F5F9"/>
+  <text x="468" y="856" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Open</text>
+
+  <rect x="24" y="900" width="492" height="74" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="40" y="914" width="46" height="46" rx="12" fill="#E0E7FF"/>
+  <text x="63" y="942" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="900" fill="#3730A3">PDF</text>
+  <text x="100" y="932" font-family="system-ui, sans-serif" font-size="14.5" font-weight="700" fill="#111827">Q4_Financial_Audit_Statement.pdf</text>
+  <text x="100" y="954" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#475569">3 pages • 196 KB • Signed on-device</text>
+  <rect x="436" y="922" width="64" height="30" rx="10" fill="#F1F5F9"/>
+  <text x="468" y="942" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Open</text>
+
+  <rect x="0" y="1036" width="540" height="104" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+  <rect x="34" y="1050" width="68" height="32" rx="16" fill="#FFE4E6"/>
+  <text x="68" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#BE123C">HOME</text>
+  <text x="68" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800" fill="#BE123C">Home</text>
+
+  <text x="169" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">TOOLS</text>
+  <text x="169" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Tools</text>
+
+  <text x="270" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">SCAN</text>
+  <text x="270" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Scan</text>
+
+  <text x="371" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">FILES</text>
+  <text x="371" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Recent</text>
+
+  <text x="472" y="1071" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#475569">PREFS</text>
+  <text x="472" y="1100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" fill="#475569">Settings</text>
+</svg>
