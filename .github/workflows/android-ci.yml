@@ -25,7 +25,7 @@ on:
 
 jobs:
   build-and-test:
-    name: Build APK & Run Robolectric Tests
+    name: Build Debug & Release APKs & Run Robolectric Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -43,7 +43,7 @@ jobs:
         with:
           gradle-version: "9.3.1"
 
-      - name: Ensure Android Debug Keystore Exists
+      - name: Ensure Android Debug & Release Keystores Exist
         run: |
           if [ ! -f debug.keystore ]; then
             keytool -genkeypair -v \
@@ -56,6 +56,17 @@ jobs:
               -validity 10000 \
               -dname "CN=Android Debug,O=Android,C=US"
           fi
+          if [ ! -f my-upload-key.jks ]; then
+            keytool -genkeypair -v \
+              -keystore my-upload-key.jks \
+              -storepass android \
+              -alias upload \
+              -keypass android \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -dname "CN=PDFly Release,OU=Engineering,O=CodeByArnob,L=Global,ST=Global,C=US"
+          fi
 
       - name: Ensure .env Exists From Template
         run: |
@@ -66,12 +77,22 @@ jobs:
       - name: Run Unit & Robolectric Test Suites
         run: gradle :app:testDebugUnitTest
 
-      - name: Assemble Debug APK
-        run: gradle :app:assembleDebug
+      - name: Assemble Debug & Signed Release APKs
+        env:
+          STORE_PASSWORD: android
+          KEY_PASSWORD: android
+        run: gradle :app:assembleDebug :app:assembleRelease
 
       - name: Upload Debug APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: pdfly-debug-apk
           path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: warn
+          if-no-files-found: error
+
+      - name: Upload Signed Release APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfly-release-apk
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error

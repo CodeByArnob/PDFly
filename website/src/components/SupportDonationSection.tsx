@@ -42,8 +42,8 @@ export const SupportDonationSection: React.FC = () => {
               Support PDFly Development
             </h2>
 
-            <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-              Every single PDF tool in PDFly is <strong>100% free forever</strong>—with no subscriptions, no locked
+            <p className="text-slate-700 dark:text-slate-200 text-base leading-relaxed">
+              Every single PDF tool in PDFly is <strong>100% free forever</strong> with no subscriptions, no locked
               features, no advertisements, and no tracking. If PDFly saves you time or helps your daily workflow, you
               can optionally support ongoing open-source maintenance via{' '}
               <strong>USDT (BEP-20)</strong> or <strong>USDC (BEP-20)</strong> on{' '}
@@ -64,7 +64,7 @@ export const SupportDonationSection: React.FC = () => {
 
             {/* Token Selector Tabs */}
             <div className="space-y-3">
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-300">
                 Select Supported BEP-20 Token
               </div>
               <div className="grid grid-cols-2 gap-3 max-w-md">
@@ -100,7 +100,7 @@ export const SupportDonationSection: React.FC = () => {
 
             {/* Wallet Address & Copy Control */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300">
+              <div className="flex items-center justify-between text-xs font-bold text-slate-700 dark:text-slate-200">
                 <span className="inline-flex items-center gap-1.5">
                   <Wallet className="w-3.5 h-3.5 text-crimson-600 dark:text-crimson-400" />
                   Receiving Wallet Address ({activeToken.symbol} • {activeToken.networkName})
@@ -224,7 +224,7 @@ export const SupportDonationSection: React.FC = () => {
               </div>
 
               <div className="pt-2 border-t border-slate-800 text-[11px] text-slate-400">
-                 inside the Android app, PDFly renders an exact ISO/IEC 18004 QR matrix locally via{' '}
+                Inside the Android app, PDFly renders an exact ISO/IEC 18004 QR matrix locally via{' '}
                 <code className="text-slate-200">QrCodeGenerator.kt</code>.
               </div>
             </div>

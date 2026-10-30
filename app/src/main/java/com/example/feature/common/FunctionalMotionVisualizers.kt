@@ -48,9 +48,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
@@ -162,118 +160,142 @@ fun MergeConvergenceVisualizer(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            Box(
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(118.dp)
                     .clip(RoundedCornerShape(14.dp))
                     .background(pdflyColors.subtleSurface)
                     .border(1.dp, pdflyColors.cardBorder, RoundedCornerShape(14.dp))
-                    .padding(12.dp)
+                    .padding(horizontal = 12.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                Canvas(modifier = Modifier.fillMaxSize()) {
+                // Left Column: Non-overlapping Source Document Queue Badges
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(6.dp),
+                    modifier = Modifier.width(82.dp)
+                ) {
+                    mergeQueue.take(3).forEachIndexed { idx, doc ->
+                        val badgeColor = sheetColors[idx % sheetColors.size]
+                        Surface(
+                            shape = RoundedCornerShape(8.dp),
+                            color = MaterialTheme.colorScheme.surface,
+                            border = BorderStroke(1.dp, badgeColor.copy(alpha = 0.65f))
+                        ) {
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 8.dp, vertical = 4.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                Text(
+                                    text = "#${idx + 1}",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontFamily = JetBrainsMonoFontFamily,
+                                    fontWeight = FontWeight.Bold,
+                                    color = badgeColor
+                                )
+                                Text(
+                                    text = "${doc.pageCount}p",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    fontFamily = JetBrainsMonoFontFamily,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onSurface
+                                )
+                            }
+                        }
+                    }
+                    if (mergeQueue.size > 3) {
+                        Text(
+                            text = "+${mergeQueue.size - 3} more",
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+
+                // Center Canvas: Dedicated Bezier Convergence Stream
+                Canvas(
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(92.dp)
+                ) {
                     val count = mergeQueue.size.coerceIn(1, 5)
-                    val targetX = size.width * 0.80f
+                    val startX = 12f
+                    val targetX = (size.width - 12f).coerceAtLeast(24f)
                     val targetY = size.height * 0.5f
 
                     for (i in 0 until count) {
                         val color = sheetColors[i % sheetColors.size]
                         val fraction = if (count == 1) 0.5f else i.toFloat() / (count - 1).toFloat()
-                        val startX = size.width * 0.18f
-                        val startY = size.height * (0.18f + fraction * 0.64f)
+                        val startY = size.height * (0.16f + fraction * 0.68f)
 
-                        // Curved convergence stream
                         val path = Path().apply {
-                            moveTo(startX + 26f, startY)
+                            moveTo(startX, startY)
                             cubicTo(
-                                size.width * 0.45f,
+                                size.width * 0.42f,
                                 startY,
-                                size.width * 0.52f,
+                                size.width * 0.58f,
                                 targetY,
-                                targetX - 36f,
+                                targetX,
                                 targetY
                             )
                         }
                         drawPath(
                             path = path,
-                            color = color.copy(alpha = 0.55f),
+                            color = color.copy(alpha = 0.65f),
                             style = Stroke(
-                                width = 4.5f,
+                                width = 4f,
                                 cap = StrokeCap.Round,
-                                pathEffect = PathEffect.dashPathEffect(floatArrayOf(12f, 10f), -pulsePhase * 44f)
+                                pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 8f), -pulsePhase * 36f)
                             )
                         )
 
-                        // Traveling page packet dot along the curve
                         val t = ((pulsePhase + i * 0.22f) % 1f)
-                        val dotX = startX + 26f + (targetX - 36f - (startX + 26f)) * t
+                        val dotX = startX + (targetX - startX) * t
                         val dotY = startY + (targetY - startY) * (t * t * (3f - 2f * t))
                         drawCircle(
                             color = color,
-                            radius = 6f,
+                            radius = 5.5f,
                             center = Offset(dotX, dotY)
-                        )
-
-                        // Source miniature PDF sheet on left
-                        drawRoundRect(
-                            color = color,
-                            topLeft = Offset(startX - 20f, startY - 13f),
-                            size = Size(38f, 26f),
-                            cornerRadius = CornerRadius(6f, 6f)
-                        )
-                    }
-
-                    // Combined Master PDF stack on the right
-                    for (layer in (count - 1) downTo 0) {
-                        val layerColor = sheetColors[layer % sheetColors.size]
-                        val offset = layer * 3.5f
-                        drawRoundRect(
-                            color = layerColor,
-                            topLeft = Offset(targetX - 26f + offset, targetY - 34f - offset),
-                            size = Size(54f, 68f),
-                            cornerRadius = CornerRadius(8f, 8f)
                         )
                     }
                 }
 
-                // Labels overlay
-                Column(
-                    modifier = Modifier.align(Alignment.CenterStart),
-                    verticalArrangement = Arrangement.spacedBy(2.dp)
+                // Right Column: High-Contrast Combined Output Card
+                Surface(
+                    shape = RoundedCornerShape(12.dp),
+                    color = pdflyColors.indigoContainer,
+                    border = BorderStroke(1.5.dp, pdflyColors.indigoIcon),
+                    modifier = Modifier.width(92.dp)
                 ) {
-                    mergeQueue.take(3).forEachIndexed { idx, doc ->
+                    Column(
+                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 10.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
                         Text(
-                            text = "#${idx + 1} (${doc.pageCount}p)",
+                            text = "MERGED",
                             style = MaterialTheme.typography.labelSmall,
+                            fontFamily = JetBrainsMonoFontFamily,
+                            fontWeight = FontWeight.Bold,
+                            color = pdflyColors.indigoIcon
+                        )
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(
+                            text = "$totalPages Pages",
+                            style = MaterialTheme.typography.titleSmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface
                         )
-                    }
-                }
-
-                Column(
-                    modifier = Modifier
-                        .align(Alignment.CenterEnd)
-                        .padding(end = 6.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Text(
-                        text = "${totalPages}p",
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.Bold,
-                        color = Color.White
-                    )
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Surface(
-                        shape = RoundedCornerShape(4.dp),
-                        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.92f)
-                    ) {
+                        Spacer(modifier = Modifier.height(2.dp))
                         Text(
                             text = LocalFileManager.formatFileSize(totalBytes),
                             style = MaterialTheme.typography.labelSmall,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.onSurface,
-                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 1.dp)
+                            fontFamily = JetBrainsMonoFontFamily,
+                            fontWeight = FontWeight.SemiBold,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -352,7 +374,7 @@ fun SplitSeparationVisualizer(
                 text = if (splitMode == SplitMode.EVERY_PAGE) {
                     "All $pageCount pages will separate into $pageCount individual PDF files."
                 } else {
-                    "Tap any page sheet below to toggle extraction — selected pages lift out of the deck:"
+                    "Tap any page sheet below to toggle extraction. Selected pages lift out of the deck:"
                 },
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -363,7 +385,9 @@ fun SplitSeparationVisualizer(
             FlowRow(
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 6.dp)
             ) {
                 for (pageIdx in 0 until visibleCount) {
                     val isSelected = splitMode == SplitMode.EVERY_PAGE || selectedPagesZeroBased.contains(pageIdx)
@@ -606,8 +630,8 @@ fun ImageToPageMorphVisualizer(
     val rawH = if (orientation == PageOrientation.PORTRAIT) paperSize.heightPt else paperSize.widthPt
     val aspect = rawW.toFloat() / rawH.toFloat().coerceAtLeast(1f)
 
-    val targetHeightDp = 112.dp
-    val targetWidthDp = (112f * aspect).coerceIn(72f, 165f).dp
+    val targetHeightDp = 96.dp
+    val targetWidthDp = (96f * aspect).coerceIn(64f, 130f).dp
 
     val animatedWidth by animateDpAsState(
         targetValue = targetWidthDp,
@@ -666,13 +690,13 @@ fun ImageToPageMorphVisualizer(
                 )
             }
 
-            Spacer(modifier = Modifier.width(14.dp))
+            Spacer(modifier = Modifier.width(12.dp))
 
             // Animated Paper Sheet Box
             Box(
                 modifier = Modifier
-                    .width(170.dp)
-                    .height(124.dp)
+                    .width(142.dp)
+                    .height(114.dp)
                     .clip(RoundedCornerShape(12.dp))
                     .background(pdflyColors.subtleSurface)
                     .border(1.dp, pdflyColors.cardBorder, RoundedCornerShape(12.dp)),
@@ -683,7 +707,7 @@ fun ImageToPageMorphVisualizer(
                         .width(animatedWidth)
                         .height(animatedHeight)
                         .clip(RoundedCornerShape(8.dp))
-                        .background(Color.White)
+                        .background(MaterialTheme.colorScheme.surface)
                         .border(2.dp, pdflyColors.violetIcon, RoundedCornerShape(8.dp))
                         .padding(animatedMarginPad),
                     contentAlignment = Alignment.Center
@@ -700,7 +724,7 @@ fun ImageToPageMorphVisualizer(
                             Icons.Default.Description,
                             contentDescription = null,
                             tint = pdflyColors.violetIcon,
-                            modifier = Modifier.size(22.dp)
+                            modifier = Modifier.size(20.dp)
                         )
                     }
                 }

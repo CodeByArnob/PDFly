@@ -271,8 +271,10 @@ fun PdflyAppShell(viewModel: PdflyViewModel) {
                                     label = {
                                         Text(
                                             text = item.label,
-                                            style = MaterialTheme.typography.labelMedium,
-                                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.SemiBold
+                                            style = MaterialTheme.typography.labelSmall,
+                                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.SemiBold,
+                                            maxLines = 1,
+                                            softWrap = false
                                         )
                                     },
                                     colors = NavigationBarItemDefaults.colors(

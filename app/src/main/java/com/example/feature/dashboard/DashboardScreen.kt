@@ -27,6 +27,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.CallSplit
 import androidx.compose.material.icons.automirrored.filled.MergeType
+import androidx.compose.material.icons.automirrored.filled.Subject
 import androidx.compose.material.icons.filled.Apps
 import androidx.compose.material.icons.filled.AutoAwesomeMotion
 import androidx.compose.material.icons.filled.CameraAlt
@@ -48,7 +49,6 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.Subject
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.material.icons.filled.ViewModule
@@ -173,7 +173,7 @@ fun rememberAllToolCardSpecs(): List<ToolCardVisualSpec> {
             ),
             ToolCardVisualSpec(
                 tool = PdfToolType.EXTRACT_TEXT,
-                icon = Icons.Default.Subject,
+                icon = Icons.AutoMirrored.Filled.Subject,
                 accentColor = pdflyColors.amberIcon,
                 containerColor = pdflyColors.amberContainer
             ),
@@ -241,8 +241,9 @@ fun DashboardScreen(
 ) {
     val context = LocalContext.current
     val pdflyColors = MaterialTheme.pdflyColors
-    val storageSize = remember(allDocuments.size) {
-        LocalFileManager.getWorkspaceStorageSizeBytes(context)
+    val storageSize = remember(allDocuments) {
+        val docBytes = allDocuments.sumOf { it.sizeBytes }
+        if (docBytes > 0L) docBytes else LocalFileManager.getWorkspaceStorageSizeBytes(context)
     }
 
     val allToolSpecs = rememberAllToolCardSpecs()
@@ -421,7 +422,7 @@ fun DashboardScreen(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Column {
+                        Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = "PDF Toolkit Categories",
                                 style = MaterialTheme.typography.titleMedium,
@@ -448,7 +449,8 @@ fun DashboardScreen(
                             Text(
                                 text = "All 16 Tools",
                                 fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.primary
+                                color = MaterialTheme.colorScheme.primary,
+                                softWrap = false
                             )
                         }
                     }
@@ -513,7 +515,7 @@ fun DashboardScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Column {
+                            Column(modifier = Modifier.weight(1f)) {
                                 Text(
                                     text = category.title,
                                     style = MaterialTheme.typography.titleMedium,
@@ -526,6 +528,7 @@ fun DashboardScreen(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
+                            Spacer(modifier = Modifier.width(10.dp))
                             Surface(
                                 shape = RoundedCornerShape(8.dp),
                                 color = MaterialTheme.colorScheme.secondaryContainer,
@@ -536,6 +539,8 @@ fun DashboardScreen(
                                     style = MaterialTheme.typography.labelSmall,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSecondaryContainer,
+                                    softWrap = false,
+                                    maxLines = 1,
                                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                                 )
                             }
@@ -875,10 +880,12 @@ private fun HeroPrivacyWorkspaceBanner(
                             )
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(
-                                text = "100% FREE & OFFLINE • PRIVACY FIRST",
+                                text = "100% FREE & OFFLINE",
                                 style = MaterialTheme.typography.labelSmall,
                                 color = Color.White,
-                                fontWeight = FontWeight.Bold
+                                fontWeight = FontWeight.Bold,
+                                softWrap = false,
+                                maxLines = 1
                             )
                         }
                     }
@@ -888,7 +895,9 @@ private fun HeroPrivacyWorkspaceBanner(
                         style = MaterialTheme.typography.labelSmall,
                         fontFamily = JetBrainsMonoFontFamily,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFFE2E8F0)
+                        color = Color(0xFFE2E8F0),
+                        softWrap = false,
+                        maxLines = 1
                     )
                 }
 

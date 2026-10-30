@@ -44,3 +44,4 @@ website/.vite/
 Thumbs.db
 *.log
 *.hprof
+.aistudio/

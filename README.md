@@ -1,8 +1,8 @@
 <div align="center">
 
-# PDFly — PDF Editor & Toolkit
+# PDFly: PDF Editor & Toolkit
 
-**Your Complete PDF Studio for Android — 100% Free, 100% Offline, Open Source**
+**Your Complete PDF Studio for Android • 100% Free, 100% Offline, Open Source**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-E11D48.svg)](https://github.com/CodeByArnob/PDFly/blob/main/LICENSE)
 [![Platform: Android](https://img.shields.io/badge/Platform-Android%207.0%2B%20(API%2024%2B)-3DDC84.svg)](https://github.com/CodeByArnob/PDFly)
@@ -10,7 +10,7 @@
 [![UI: Jetpack Compose M3](https://img.shields.io/badge/UI-Jetpack%20Compose%20M3-4338CA.svg)](https://developer.android.com/jetpack/compose)
 [![Privacy: Zero Cloud Uploads](https://img.shields.io/badge/Privacy-Zero%20INTERNET%20Permission-059669.svg)](#privacy--security-model)
 
-[**Official Website (`codebyarnob.github.io/PDFly`)**](https://codebyarnob.github.io/PDFly/) • [**Download APK (Releases)**](https://github.com/CodeByArnob/PDFly/releases) • [**Report Issue**](https://github.com/CodeByArnob/PDFly/issues) • [**Maintained by @CodeByArnob**](https://github.com/CodeByArnob)
+[**Official Website (`codebyarnob.github.io/PDFly`)**](https://codebyarnob.github.io/PDFly/) • [**Direct APK Download (`v1.0.0`)**](https://github.com/CodeByArnob/PDFly/releases/download/v1.0.0/PDFly-v1.0.0-release.apk) • [**GitHub Releases**](https://github.com/CodeByArnob/PDFly/releases/tag/v1.0.0) • [**Report Issue**](https://github.com/CodeByArnob/PDFly/issues) • [**Maintained by @CodeByArnob**](https://github.com/CodeByArnob)
 
 </div>
 
@@ -20,22 +20,37 @@
 
 **PDFly** (`com.aistudio.pdfly.toolkit`) is a complete, privacy-first, offline native Android PDF productivity suite built with **Kotlin**, **Jetpack Compose**, **Material Design 3**, **MVVM / Clean Architecture**, **Room Database**, **Jetpack DataStore**, **CameraX**, and a native **ISO PDF 1.4 (`PdfRenderer` / `PdfDocument` / `IsoPdf14Codec`)** processing engine.
 
-Every single PDF tool in PDFly is **100% free forever**—with no subscriptions, no locked tools, no trial limits, no mandatory accounts, and no advertisements.
+Every single PDF tool in PDFly is **100% free forever**, with no subscriptions, no locked tools, no trial limits, no mandatory accounts, and no advertisements.
 
 ---
 
-## App Screenshots
+## Genuine Android Application Screenshots
+
+Captured directly from the working native Android Jetpack Compose application:
 
 <p align="center">
-  <img src="docs/screenshots/01-home-dashboard.svg" width="31%" alt="PDFly Home Dashboard" />
-  <img src="docs/screenshots/02-tools-catalog.svg" width="31%" alt="PDFly 16-Tool Catalog" />
-  <img src="docs/screenshots/03-pdf-reader-annotate.svg" width="31%" alt="PDFly Reader & Annotation Studio" />
+  <img src="docs/screenshots/01-home-dashboard.png" width="31%" alt="01. Home Dashboard" />
+  <img src="docs/screenshots/02-pdf-reader.png" width="31%" alt="02. PDF Reader" />
+  <img src="docs/screenshots/03-pdf-merge.png" width="31%" alt="03. PDF Merge" />
 </p>
 <p align="center">
-  <img src="docs/screenshots/04-merge-split-compress.svg" width="31%" alt="PDFly Merge & Compress Workspace" />
-  <img src="docs/screenshots/05-document-scanner.svg" width="31%" alt="PDFly CameraX Document Scanner" />
-  <img src="docs/screenshots/06-support-and-dark-mode.svg" width="31%" alt="PDFly Obsidian Dark Mode & Voluntary Support" />
+  <img src="docs/screenshots/04-pdf-split.png" width="31%" alt="04. PDF Split" />
+  <img src="docs/screenshots/05-pdf-compressor.png" width="31%" alt="05. PDF Compressor" />
+  <img src="docs/screenshots/06-pdf-scanner.png" width="31%" alt="06. PDF Scanner" />
 </p>
+<p align="center">
+  <img src="docs/screenshots/07-pdf-signature.png" width="31%" alt="07. PDF Signature" />
+  <img src="docs/screenshots/08-other-tools.png" width="31%" alt="08. All 16 PDF Tools Catalog" />
+  <img src="docs/screenshots/09-settings-theme.png" width="31%" alt="09. Settings & Obsidian Dark Theme" />
+</p>
+
+---
+
+## Download Android APK
+
+- **Direct Signed Release APK (`v1.0.0`)**: [`PDFly-v1.0.0-release.apk`](https://github.com/CodeByArnob/PDFly/releases/download/v1.0.0/PDFly-v1.0.0-release.apk)
+- **GitHub Release Page (`v1.0.0`)**: [`https://github.com/CodeByArnob/PDFly/releases/tag/v1.0.0`](https://github.com/CodeByArnob/PDFly/releases/tag/v1.0.0)
+- **GitHub Actions CI Artifacts**: Both `pdfly-debug-apk` and `pdfly-release-apk` are built and uploaded on every CI run under [GitHub Actions](https://github.com/CodeByArnob/PDFly/actions).
 
 ---
 
@@ -107,10 +122,10 @@ PDFly/
 │       │   ├── donation/SupportDonationScreen.kt     # Voluntary USDT/USDC (BEP-20) open-source support screen
 │       │   └── settings/SettingsAndAboutScreen.kt    # Theme switcher, cache manager, Privacy & About screens
 │       └── ui/theme/                                 # WCAG 2.2 AA+ Editorial Light & Obsidian Dark themes
-├── website/                                  # Official Marketing & Documentation Website (React + Vite + TS)
-│   ├── public/screenshots/                   # High-DPI SVG Android app screen previews
-│   └── src/                                  # Interactive 16-tool showcase, workflow simulator & docs
-├── docs/screenshots/                         # Repository documentation screenshots
+├── website/                                  # Official Product & Documentation Website (React + Vite + TS)
+│   ├── public/screenshots/                   # Genuine PNG screenshots captured from the Android app
+│   └── src/                                  # Interactive Live Mode simulator, 16-tool catalog & docs
+├── docs/screenshots/                         # Genuine Android application screenshots (01-09 PNGs)
 └── .github/workflows/                        # Android CI & GitHub Pages deployment workflows
 ```
 
@@ -119,20 +134,23 @@ PDFly/
 ## Building & Testing from Source
 
 ### Prerequisites
-- **JDK 17**
-- **Android SDK (API 36)** / Android Studio Ladybug or newer
+- **JDK 21**
+- **Gradle 9.3.1**
+- **Android SDK (API 36)**
 - **Node.js 22+** (for building `/website`)
 
 ### 1. Run Android Unit & Robolectric Tests
 ```bash
-./gradlew :app:testDebugUnitTest
+gradle :app:testDebugUnitTest
 ```
 
-### 2. Assemble Android Debug APK
+### 2. Assemble Android Debug & Signed Release APKs
 ```bash
-./gradlew :app:assembleDebug
+STORE_PASSWORD=android KEY_PASSWORD=android gradle :app:assembleDebug :app:assembleRelease
 ```
-The compiled APK will be generated at `app/build/outputs/apk/debug/app-debug.apk`.
+The compiled APKs will be generated at:
+- `app/build/outputs/apk/debug/app-debug.apk`
+- `app/build/outputs/apk/release/app-release.apk`
 
 ### 3. Run & Build the Official Website (`/website`)
 ```bash
@@ -146,12 +164,7 @@ npm run build    # Build production static bundle into website/dist/
 
 ## GitHub Pages Deployment (`https://codebyarnob.github.io/PDFly/`)
 
-This repository includes an automated GitHub Actions workflow (`.github/workflows/deploy-website.yml`) that builds `/website` and deploys `./website/dist` to **GitHub Pages**.
-
-To enable or verify GitHub Pages in repository settings:
-1. Open **Settings → Pages** in `https://github.com/CodeByArnob/PDFly`.
-2. Under **Build and deployment → Source**, select **GitHub Actions**.
-3. Any push to `main` touching `website/**` (or manual trigger via **Actions → Deploy Official Website to GitHub Pages → Run workflow**) will automatically publish the site to `https://codebyarnob.github.io/PDFly/`.
+This repository includes an automated GitHub Actions workflow (`.github/workflows/deploy-website.yml`) that builds `/website` and deploys `./website/dist` to **GitHub Pages** (`https://codebyarnob.github.io/PDFly/`).
 
 ---
 
@@ -175,4 +188,5 @@ PDFly is completely free and open source with zero paywalls, zero subscriptions,
 
 - **Author & Maintainer**: [**CodeByArnob**](https://github.com/CodeByArnob)
 - **Repository**: [`https://github.com/CodeByArnob/PDFly`](https://github.com/CodeByArnob/PDFly)
+- **Official Website**: [`https://codebyarnob.github.io/PDFly/`](https://codebyarnob.github.io/PDFly/)
 - **License**: Released under the [MIT License](LICENSE).

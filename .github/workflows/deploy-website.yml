@@ -18,8 +18,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
-    name: Build & Publish Static Website (/website)
+  build:
+    name: Build Static Website (/website)
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Install Website Dependencies
         working-directory: ./website
         run: npm install
@@ -39,10 +42,28 @@ jobs:
         working-directory: ./website
         run: npm run build
 
-      - name: Publish Website Bundle to gh-pages Branch
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./website/dist
+
+      - name: Sync Website Bundle to gh-pages Branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/dist
           force_orphan: true
           commit_message: "chore(website): deploy official PDFly website to GitHub Pages"
+
+  deploy:
+    name: Deploy to GitHub Pages Environment
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

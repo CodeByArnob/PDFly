@@ -1,11 +1,15 @@
 package com.example
 
 import android.content.Context
+import android.graphics.Bitmap
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.test.core.app.ApplicationProvider
@@ -15,6 +19,7 @@ import com.example.core.processing.PdfInspectionResult
 import com.example.core.processing.PdfProcessingEngine
 import com.example.data.local.PdfAnnotationEntity
 import com.example.domain.model.AnnotationType
+import com.example.domain.model.AppThemeMode
 import com.example.domain.model.CompressionPreset
 import com.example.domain.model.ImageExportFormat
 import com.example.domain.model.PageMarginPreset
@@ -28,6 +33,7 @@ import com.example.domain.model.ScannedPageDraft
 import com.example.domain.model.SplitMode
 import com.example.domain.model.WatermarkConfig
 import com.example.domain.model.WatermarkPosition
+import com.example.feature.TopLevelDestination
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
@@ -38,10 +44,13 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import org.robolectric.annotation.GraphicsMode
 import java.io.File
+import java.io.FileOutputStream
 
 @RunWith(RobolectricTestRunner::class)
-@Config(sdk = [36])
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
+@Config(sdk = [36], qualifiers = "w412dp-h915dp-xxhdpi")
 class ExampleRobolectricTest {
 
     @get:Rule
@@ -461,5 +470,118 @@ class ExampleRobolectricTest {
         val docCountAfter = docsDir.listFiles()?.size ?: 0
         assertEquals(docCountBefore, docCountAfter)
     }
+
+    @Test
+    fun captureGenuineApplicationScreenshots() {
+        composeTestRule.waitForIdle()
+        val viewModel = composeTestRule.activity.viewModel
+
+        // Ensure Light Mode and Reduced Motion for crisp deterministic frame capture
+        composeTestRule.runOnUiThread {
+            viewModel.completeCinematicIntro()
+            viewModel.setThemeMode(AppThemeMode.LIGHT)
+            viewModel.setReducedMotionEnabled(true)
+            viewModel.navigateTo(TopLevelDestination.DASHBOARD)
+        }
+        composeTestRule.waitForIdle()
+        captureScreenPng("01-home-dashboard.png")
+
+        // 2. PDF Reader
+        composeTestRule.runOnUiThread {
+            viewModel.navigateTo(TopLevelDestination.TOOL_READER)
+        }
+        Thread.sleep(250)
+        composeTestRule.waitForIdle()
+        captureScreenPng("02-pdf-reader.png")
+
+        // 3. PDF Merge
+        composeTestRule.runOnUiThread {
+            viewModel.allDocuments.value.forEach { doc ->
+                viewModel.addDocumentToMergeQueue(doc)
+            }
+            viewModel.navigateTo(TopLevelDestination.TOOL_MERGE)
+        }
+        composeTestRule.waitForIdle()
+        captureScreenPng("03-pdf-merge.png")
+
+        // 4. PDF Split
+        composeTestRule.runOnUiThread {
+            viewModel.navigateTo(TopLevelDestination.TOOL_SPLIT)
+        }
+        composeTestRule.waitForIdle()
+        captureScreenPng("04-pdf-split.png")
+
+        // 5. PDF Compressor
+        composeTestRule.runOnUiThread {
+            viewModel.navigateTo(TopLevelDestination.TOOL_COMPRESS)
+        }
+        composeTestRule.waitForIdle()
+        captureScreenPng("05-pdf-compressor.png")
+
+        // 6. PDF Scanner
+        composeTestRule.runOnUiThread {
+            viewModel.navigateTo(TopLevelDestination.TOOL_SCANNER)
+        }
+        Thread.sleep(250)
+        composeTestRule.waitForIdle()
+        captureScreenPng("06-pdf-scanner.png")
+
+        // 7. PDF Signature Studio
+        composeTestRule.runOnUiThread {
+            viewModel.navigateTo(TopLevelDestination.TOOL_SIGNATURE)
+        }
+        Thread.sleep(250)
+        composeTestRule.waitForIdle()
+        captureScreenPng("07-pdf-signature.png")
+
+        // 8. Other Available Tools (All 16 Tools Catalog & Page Organizer)
+        composeTestRule.runOnUiThread {
+            viewModel.navigateTo(TopLevelDestination.ALL_TOOLS)
+        }
+        composeTestRule.waitForIdle()
+        captureScreenPng("08-other-tools.png")
+
+        // 9. Settings & Theme Options (in Obsidian Dark Mode)
+        composeTestRule.runOnUiThread {
+            viewModel.setThemeMode(AppThemeMode.DARK)
+            viewModel.navigateTo(TopLevelDestination.SETTINGS)
+        }
+        composeTestRule.waitForIdle()
+        captureScreenPng("09-settings-theme.png")
+
+        // Restore Light mode after capture
+        composeTestRule.runOnUiThread {
+            viewModel.setThemeMode(AppThemeMode.LIGHT)
+        }
+        composeTestRule.waitForIdle()
+    }
+
+    private fun captureScreenPng(fileName: String) {
+        composeTestRule.waitForIdle()
+        val bitmap: Bitmap = runCatching {
+            composeTestRule.onRoot().captureToImage().asAndroidBitmap()
+        }.getOrElse {
+            val view = composeTestRule.activity.window.decorView
+            val w = view.width.coerceAtLeast(1080)
+            val h = view.height.coerceAtLeast(2200)
+            val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+            val canvas = android.graphics.Canvas(bmp)
+            view.draw(canvas)
+            bmp
+        }
+        val docsDir = File("../docs/screenshots").apply { mkdirs() }
+        val webDir = File("../website/public/screenshots").apply { mkdirs() }
+        val docsFile = File(docsDir, fileName)
+        val webFile = File(webDir, fileName)
+        FileOutputStream(docsFile).use { out ->
+            bitmap.compress(Bitmap.CompressFormat.PNG, 92, out)
+        }
+        FileOutputStream(webFile).use { out ->
+            bitmap.compress(Bitmap.CompressFormat.PNG, 92, out)
+        }
+        assertTrue("Screenshot $fileName must exist and be non-empty", docsFile.exists() && docsFile.length() > 1000L)
+        assertTrue("Website screenshot $fileName must exist and be non-empty", webFile.exists() && webFile.length() > 1000L)
+    }
 }
+
 
